@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/screen_toolbar"
+                layout="@layout/global_toolbar" />
+
+            <include
+                android:id="@+id/screen_banner_view"
+                layout="@layout/global_banner_view" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/mobile_view"
+                    layout="@layout/enter_mobile_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_otp_lbl"
+                    android:layout_marginTop="@dimen/dp_10" />
+
+                <LinearLayout
+                    android:id="@+id/or_Lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile_view"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_b9b9b9" />
+
+
+                    <com.road.star.utils.Road_Lable
+                        android:id="@+id/or_lbl"
+                        style="@style/regular_black_14_text"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="@string/or_lbl"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorblack" />
+
+                    <View
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_b9b9b9" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/socialLin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/or_Lin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/gmail_iv"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:src="@drawable/facebook_iv" />
+
+                    <ImageView
+                        android:id="@+id/facebook_iv"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:src="@drawable/gmail_iv" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/register_btn"
+                    layout="@layout/action_red_gradient_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialLin"
+                    android:layout_marginTop="@dimen/dp_20"
+                    app:title="@{@string/next}" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

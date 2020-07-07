@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        tools:context=".fragments.ClaimInitiateFragment">
+
+
+        <include
+            android:id="@+id/screen_toolbar"
+            layout="@layout/global_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/send_rel"
+            android:layout_below="@+id/screen_toolbar">
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/send_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_16sdp"
+            android:background="@color/color_e3e3e7"
+            android:minHeight="@dimen/_40sdp">
+
+
+            <EditText
+                android:id="@+id/message_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_16sdp"
+                android:layout_toStartOf="@+id/send_ic"
+                android:background="@null" />
+
+
+            <ImageView
+                android:id="@+id/send_ic"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/send_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

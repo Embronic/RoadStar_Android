@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        tools:context=".fragments.ClaimInitiateFragment">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/topLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <com.github.florent37.shapeofview.ShapeOfView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:shape_clip_drawable="@drawable/ic_header">
+
+                        <include
+                            android:id="@+id/screen_toolbar"
+                            layout="@layout/global_toolbar" />
+
+                    </com.github.florent37.shapeofview.ShapeOfView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_20sdp">
+
+                    <include
+                        android:id="@+id/nameLayout"
+                        layout="@layout/profile_item_view_layout"
+                        android:layout_marginTop="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                    <include
+                        android:id="@+id/emailLayout"
+                        layout="@layout/profile_item_view_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                    <include
+                        android:id="@+id/addressLayout"
+                        layout="@layout/profile_item_view_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+                    <include
+                        android:id="@+id/paymentLayout"
+                        layout="@layout/profile_item_view_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+
+                    <include
+                        android:id="@+id/settingLayout"
+                        layout="@layout/profile_item_view_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" />
+
+
+                    <include
+                        android:id="@+id/register_btn"
+                        layout="@layout/action_red_gradient_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        app:title="@{@string/edit_profile}" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_anchor="@id/topLayout"
+                app:layout_anchorGravity="bottom|center" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+</layout>

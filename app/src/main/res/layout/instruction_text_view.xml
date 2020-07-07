@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_cardview"
+        style="@style/small_card_style"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="@dimen/_80sdp"
+            android:minHeight="@dimen/_80sdp"
+            android:background="@drawable/instruction_text_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                >
+
+                <com.road.star.utils.Road_Lable
+                   style="@style/regular_black_14_text"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/colorblack"
+                    android:text="@{title}" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

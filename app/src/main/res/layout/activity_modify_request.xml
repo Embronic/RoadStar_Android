@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/screen_toolbar"
+                layout="@layout/global_toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:orientation="vertical">
+
+                <com.road.star.utils.Road_Lable
+                    style="@style/regular_black_14_text"
+                    android:text="@string/product_category"
+                    android:textColor="@color/menu_text_color" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-8dp"
+                    android:paddingStart="@dimen/dp_0"
+                    android:spinnerMode="dialog" />
+
+                <!---->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_14_text"
+                        android:text="@string/product_type"
+                        android:textColor="@color/menu_text_color" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/product_type_spinner"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-8dp"
+                        android:paddingStart="@dimen/dp_0"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:layout_width="wrap_content"
+                            android:text="@string/product_weight"
+                            android:textColor="@color/menu_text_color" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                    <EditText style="@style/edittext_style" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_width="wrap_content"
+                                android:text="@string/height"
+                                android:textColor="@color/menu_text_color" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_edit" />
+
+                        </RelativeLayout>
+
+                        <EditText style="@style/edittext_style" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_width="wrap_content"
+                                android:text="@string/width"
+                                android:textColor="@color/menu_text_color" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_edit" />
+
+                        </RelativeLayout>
+
+                        <EditText style="@style/edittext_style" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_14_text"
+                        android:layout_centerVertical="true"
+                        android:text="@string/attach_photo"
+                        android:textColor="@color/menu_text_color" />
+
+                    <ImageView
+                        android:id="@+id/attach_iv"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:src="@drawable/attach" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <include
+                        layout="@layout/instruction_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_weight="1" />
+
+                    <include
+                        layout="@layout/instruction_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:layout_width="wrap_content"
+                            android:text="@string/product_distribution"
+                            android:textColor="@color/menu_text_color" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+
+                    <include
+                        layout="@layout/instruction_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        app:title="@{@string/lorem_ipsum}" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:layout_width="wrap_content"
+                            android:text="@string/instruction"
+                            android:textColor="@color/menu_text_color" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                    <include
+                        layout="@layout/instruction_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        app:title="@{@string/lorem_ipsum}" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ivTop"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_radio_button_checked"
+                                android:tint="@color/color_seperator" />
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_above="@+id/ivBottom"
+                                android:layout_below="@+id/ivTop"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:background="@color/color_seperator" />
+
+                            <ImageView
+                                android:id="@+id/ivBottom"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_directions_car"
+                                android:tint="@color/color_seperator" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.road.star.utils.Road_Lable
+                                    style="@style/regular_black_14_text"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/pickup_location"
+                                    android:textColor="@color/menu_text_color" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_edit" />
+
+                            </RelativeLayout>
+
+                            <EditText
+                                style="@style/edit_text_normal"
+                                android:hint="@string/pickup_location"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="4299 Express lane"
+                                android:textColor="@color/color_b9b9b9" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@color/color_seperator" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:orientation="vertical">
+
+                                <com.road.star.utils.Road_Lable
+                                    style="@style/regular_black_14_text"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/drop_location"
+                                    android:textColor="@color/menu_text_color" />
+
+                                <EditText
+                                    style="@style/edit_text_normal"
+                                    android:hint="@string/pickup_location"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:text="4299 Express lane"
+                                    android:textColor="@color/color_b9b9b9" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:orientation="vertical">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:layout_width="wrap_content"
+                            android:text="@string/receiver_details"
+                            android:textColor="@color/menu_text_color" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_width="wrap_content"
+                                android:text="@string/name"
+                                android:textColor="@color/colorblack" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_edit" />
+
+                        </RelativeLayout>
+
+                        <EditText
+                            style="@style/edittext_style"
+                            android:layout_marginTop="-5dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_width="wrap_content"
+                                android:text="@string/phone_number"
+                                android:textColor="@color/colorblack" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_edit" />
+
+                        </RelativeLayout>
+
+                        <EditText
+                            style="@style/edittext_style"
+                            android:layout_marginTop="-5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/next_btn"
+                    layout="@layout/action_red_gradient_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    app:title="@{@string/modify_request}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

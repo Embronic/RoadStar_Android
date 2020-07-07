@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_payment_select"
+            style="@style/small_card_style"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/payment_method_card_color"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_14_text"
+                        android:text="@string/pin"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textColor="@color/colorblack" />
+
+                    <EditText style="@style/edittext_style" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_14_text"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/cvv_no"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textColor="@color/colorblack" />
+
+                    <EditText style="@style/edittext_style" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_14_text"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/expiry"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textColor="@color/colorblack" />
+
+                    <EditText style="@style/edittext_style" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

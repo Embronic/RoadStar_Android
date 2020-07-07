@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_16_text"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/menu_text_color"
+                        android:text="@string/local_delivery" />
+
+                    <ImageView
+                        android:id="@+id/locale_delivery_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/_130sdp"
+                        android:minHeight="@dimen/_130sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:src="@drawable/ic_local" />
+
+                  <!--  <include
+                        android:id="@+id/locale_delivery_view"
+                        layout="@layout/large_container_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_20sdp" />-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+
+                    <com.road.star.utils.Road_Lable
+                        style="@style/regular_black_16_text"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/menu_text_color"
+                        android:text="@string/air_and_sea_delivery" />
+
+                    <ImageView
+                        android:id="@+id/air_sea_delivery_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/_130sdp"
+                        android:minHeight="@dimen/_130sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:src="@drawable/ic_international" />
+
+                   <!-- <include
+                        android:id="@+id/air_sea_delivery_view"
+                        layout="@layout/large_container_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_20sdp" />-->
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

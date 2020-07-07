@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/topLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_d6d6d6">
+
+                        <include
+                            android:id="@+id/select_from_to_view"
+                            layout="@layout/select_from_to_location_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_marginEnd="@dimen/_20sdp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/innerView_back_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:src="@drawable/ic_back_arrow_toolbar" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_32sdp"
+                        android:layout_marginEnd="@dimen/_32sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/payment_method"
+                                android:textColor="@color/colorblack" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_5sdp">
+
+                                <com.road.star.utils.Road_Lable
+                                    style="@style/regular_black_14_text"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/cash"
+                                    android:textColor="@color/colorblack" />
+
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    style="@style/MyRadioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+
+                                    android:textAlignment="viewStart" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/color_b9b9b9" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp">
+
+                                <com.road.star.utils.Road_Lable
+                                    style="@style/regular_black_14_text"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/card"
+                                    android:textColor="@color/colorblack" />
+
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    style="@style/MyRadioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:textAlignment="viewStart" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:orientation="vertical">
+
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:text="@string/submit_your_card_details"
+                                android:textColor="@color/colorblack" />
+
+
+                            <include
+                                android:id="@+id/card_detail_view"
+                                layout="@layout/card_detail_input_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_20" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:orientation="vertical">
+
+
+                        <include
+                            android:id="@+id/modify_request_btn"
+                            layout="@layout/action_red_gradient_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@{@string/modify_request}" />
+
+                        <include
+                            android:id="@+id/done_btn"
+                            layout="@layout/action_red_gradient_button"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@{@string/submit_request}" />
+
+
+                        <include
+                            android:id="@+id/cancel_btn"
+                            layout="@layout/action_black_strock_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:title="@{@string/cancel_request}" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/button"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/receiver_details"
+                android:translationY="-10dp"
+                app:layout_anchor="@id/topLayout"
+                app:layout_anchorGravity="bottom|center" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

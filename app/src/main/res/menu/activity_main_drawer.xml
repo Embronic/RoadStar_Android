@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/navigation_your_packege"
+            android:icon="@drawable/your_courier"
+            android:title="@string/your_courier" />
+
+
+        <item
+            android:id="@+id/navigation_booking_history"
+            android:icon="@drawable/booking_histort"
+            android:title="@string/booking_history" />
+
+
+        <item
+            android:id="@+id/navigation_available_history"
+            android:icon="@drawable/available_booking"
+            android:title="@string/available_booking" />
+
+
+        <item
+            android:id="@+id/navigation_claim"
+            android:icon="@drawable/claim"
+            android:title="@string/claim" />
+
+        <item
+            android:id="@+id/navigation_payment_method"
+            android:icon="@drawable/card"
+            android:title="@string/payment_method" />
+
+        <item
+            android:id="@+id/navigation_support"
+            android:icon="@drawable/support"
+            android:title="@string/suppport" />
+
+        <item
+            android:id="@+id/navigation_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/logout" />
+
+    </group>
+
+</menu>

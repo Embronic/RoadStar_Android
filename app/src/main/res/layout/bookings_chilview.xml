@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp_2"
+            app:cardBackgroundColor="@color/colorwhite"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2">
+
+
+                        <ImageView
+                            android:id="@+id/vehicle_type_iv"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/vehicle_type_car" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".8"
+                            android:orientation="vertical">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:text="Sat, 11 July, 10:30 AM"
+                                android:textColor="@color/colorblack" />
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Acc No, CRN123456" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight=".2">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/medium_black_16_text"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="$30"
+                                android:textColor="@color/colorPrimary" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/color_seperator" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/source_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_black_circle_marker" />
+
+                            <View
+                                android:id="@+id/seperator"
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:layout_above="@+id/destination_iv"
+                                android:layout_below="@+id/source_iv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorblack" />
+
+
+                            <ImageView
+                                android:id="@+id/destination_iv"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/booking_drop_iv" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:minHeight="@dimen/_70sdp">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/medium_black_16_text"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:singleLine="true"
+                            android:text="Tellin, Estonia" />
+
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/medium_black_16_text"
+                            android:layout_alignParentBottom="true"
+                            android:singleLine="true"
+                            android:text="Helsinki, Estonia" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

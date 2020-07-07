@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <include
+            android:id="@+id/screen_toolbar"
+            layout="@layout/global_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/delivered_successfully" />
+
+                <com.road.star.utils.Road_Lable
+                    style="@style/regular_black_14_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/your_package_has_been_delivered"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorblack"
+                    android:textSize="@dimen/_18sdp" />
+
+                <com.road.star.utils.Road_Lable
+                    style="@style/medium_black_16_text"
+                    android:layout_gravity="center_horizontal"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+                    android:text="@string/successfully"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="@dimen/_22sdp" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_rb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/client_received_rating_name_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/dp_40"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/color_b9b9b9"
+                    android:progressTint="@color/colorPrimary"
+                    android:secondaryProgressTint="@color/colorPrimaryDark"
+                    android:stepSize="0.5"
+                    app:mrb_fillBackgroundStars="true" />
+
+                <com.road.star.utils.Road_Lable
+                    style="@style/regular_black_14_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/rate_the_driver"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorblack"
+                    android:textSize="@dimen/_18sdp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

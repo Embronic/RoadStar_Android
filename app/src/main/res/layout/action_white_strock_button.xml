@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="java.lang.String" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/action_btn_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_strocked_bg"
+        android:minHeight="@dimen/dp_56">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+
+            <com.road.star.utils.Road_Lable
+                android:id="@+id/action_btn_tv"
+                style="@style/regular_black_16_text"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:singleLine="true"
+                android:text="@{title}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

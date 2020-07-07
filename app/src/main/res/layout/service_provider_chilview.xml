@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@color/colorwhite"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp_2"
+            app:cardBackgroundColor="@color/colorwhite"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".2">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher_background" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:text="Aman"
+                                android:textColor="@color/colorblack" />
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Long Haul Truck" />
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="981233456"
+                                android:textStyle="bold" />
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Total Drives : 22" />
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/rating_rb"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@+id/client_received_rating_name_tv"
+                                android:layout_centerHorizontal="true"
+                                android:numStars="5"
+                                android:progressBackgroundTint="@color/color_b9b9b9"
+                                android:progressTint="@color/colorPrimary"
+                                android:secondaryProgressTint="@color/colorPrimaryDark"
+                                android:stepSize="0.5"
+                                app:mrb_fillBackgroundStars="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2"
+                        android:layout_weight=".2">
+
+                        <ImageView
+                            style="@style/medium_black_16_text"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:background="@drawable/ic_launcher_background"
+                            android:textColor="@color/colorPrimary" />
+
+                        <ImageView
+                            style="@style/medium_black_16_text"
+                            android:layout_centerInParent="true"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_launcher_background"
+                            android:textColor="@color/colorPrimary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

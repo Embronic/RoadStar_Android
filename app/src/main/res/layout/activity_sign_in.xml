@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/screen_toolbar"
+                layout="@layout/global_toolbar" />
+
+            <include
+                android:id="@+id/screen_banner_view"
+                layout="@layout/global_banner_view" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:orientation="vertical">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:text="@string/username"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorLabel" />
+
+
+                        <EditText
+                            style="@style/edittext_style"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:inputType="textEmailAddress" />
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="@string/password"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorLabel" />
+
+                        <EditText
+                            style="@style/edittext_style"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:inputType="textPassword" />
+
+
+                        <com.road.star.utils.Road_Lable
+                            android:id="@+id/forgot_password_lbl"
+                            style="@style/medium_black_14_text"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Forgot Password" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <com.road.star.utils.Road_Lable
+                            style="@style/regular_black_14_text"
+                            android:text="@string/dont_have_account"
+                            android:textColor="@color/colorblack"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.road.star.utils.Road_Lable
+                            android:id="@+id/register_now_lbl"
+                            style="@style/medium_black_16_text"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="@string/registered"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/register_btn"
+                        layout="@layout/action_red_gradient_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        app:title="@{@string/next}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>

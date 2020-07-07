@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        tools:context=".fragments.ClaimInitiateFragment">
+
+
+        <include
+            android:id="@+id/screen_toolbar"
+            layout="@layout/global_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/claim_imput_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.road.star.utils.Road_Lable
+                style="@style/medium_black_18_text"
+                android:text="@string/request_number" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_spinner_default"
+                android:paddingStart="@dimen/dp_0"
+                android:spinnerMode="dialog" />
+
+            <com.road.star.utils.Road_Lable
+                style="@style/medium_black_18_text"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/please_fill_the_full_information_about_your_package" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@android:drawable/editbox_background"
+                android:minHeight="@dimen/_150sdp" />
+
+
+            <include
+                android:id="@+id/submit_btn"
+                layout="@layout/action_red_gradient_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_30"
+                app:title="@{@string/submit}" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/claim_submit_success_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/claim_success_iv" />
+
+
+                <com.road.star.utils.Road_Lable
+                    style="@style/medium_black_18_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:textAlignment="center"
+                    android:text="@string/your_request_hasbeen_successfully_submitted"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
