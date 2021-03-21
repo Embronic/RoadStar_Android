@@ -65,10 +65,10 @@ public class DashboardFragment extends BaseFragment {
         super.onClick(v);
         switch (v.getId()) {
             case R.id.locale_delivery_view:
-                StartBookingActivity.startActivity(getActivity(),"locale_delivery_view");
+                StartBookingActivity.startActivity(getActivity(),"");
                 break;
             case R.id.air_sea_delivery_view:
-                StartBookingActivity.startActivity(getActivity(),"air_sea_delivery_view");
+                StartBookingActivity.startActivity(getActivity(),"");
                 break;
         }
     }

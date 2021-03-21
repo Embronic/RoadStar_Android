@@ -18,13 +18,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
+
+        <activity
+            android:name=".activities.UpdatePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity
+            android:name=".activities.ForgotPasswordOTPActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity" />
+
         <activity
             android:name=".activities.ServiceProviderListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
             android:resizeableActivity="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"></activity>
         <activity
             android:name=".activities.EditProfileActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"

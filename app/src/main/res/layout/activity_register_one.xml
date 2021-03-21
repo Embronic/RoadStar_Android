@@ -73,6 +73,7 @@
                                     android:textColor="@color/colorLabel" />
 
                                 <EditText
+                                    android:id="@+id/et_first_name"
                                     style="@style/edittext_style"
                                     android:layout_marginTop="@dimen/_5sdp" />
 
@@ -92,6 +93,7 @@
                                     android:textColor="@color/colorLabel" />
 
                                 <EditText
+                                    android:id="@+id/et_last_name"
                                     style="@style/edittext_style"
                                     android:layout_marginTop="@dimen/_5sdp" />
 
@@ -106,6 +108,7 @@
                             android:textColor="@color/colorLabel" />
 
                         <EditText
+                            android:id="@+id/et_email"
                             style="@style/edittext_style"
                             android:layout_marginTop="@dimen/_5sdp" />
 
@@ -187,6 +190,7 @@
                                 android:orientation="vertical">
 
                                 <EditText
+                                    android:id="@+id/et_mobile"
                                     style="@style/edittext_style"
                                     android:layout_height="match_parent"
                                     android:inputType="number" />
@@ -265,12 +269,57 @@
                                 android:orientation="vertical">
 
                                 <EditText
+                                    android:id="@+id/et_address"
                                     style="@style/edittext_style"
                                     android:layout_marginTop="@dimen/_5sdp" />
                             </LinearLayout>
 
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:text="@string/state"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorLabel" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/state_spinner"
+                                style="@style/spinner_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-8dp"
+                                android:paddingStart="@dimen/dp_0"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.road.star.utils.Road_Lable
+                                style="@style/regular_black_14_text"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:text="@string/city"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorLabel" />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/city_spinner"
+                                style="@style/spinner_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-8dp"
+                                android:paddingStart="@dimen/dp_0"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout >
 
                         <com.road.star.utils.Road_Lable
                             style="@style/regular_black_14_text"
@@ -280,6 +329,7 @@
                             android:textColor="@color/colorLabel" />
 
                         <EditText
+                            android:id="@+id/et_password"
                             style="@style/edittext_style"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:inputType="textPassword" />

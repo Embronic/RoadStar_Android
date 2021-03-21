@@ -62,6 +62,7 @@
 
 
                         <EditText
+                            android:id="@+id/et_email"
                             style="@style/edittext_style"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:inputType="textEmailAddress" />
@@ -74,6 +75,7 @@
                             android:textColor="@color/colorLabel" />
 
                         <EditText
+                            android:id="@+id/et_password"
                             style="@style/edittext_style"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:inputType="textPassword" />

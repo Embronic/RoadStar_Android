@@ -21,7 +21,6 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "url";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {
@@ -48,9 +47,7 @@ public class ApiClient {
                             @Override
                             public boolean verify(String hostname, SSLSession session) {
                                 HostnameVerifier hv = HttpsURLConnection.getDefaultHostnameVerifier();
-                                return hv.verify("url", session);
-                                /*devapi.letsmd.com*/
-                                /* api.letsmd.com*/
+                                return hv.verify("roadstartrips.com", session);
 
                             }
                         }).build();
@@ -68,9 +65,7 @@ public class ApiClient {
                             @Override
                             public boolean verify(String hostname, SSLSession session) {
                                 HostnameVerifier hv = HttpsURLConnection.getDefaultHostnameVerifier();
-                                return hv.verify("api.letsmd.com", session);
-                                /*devapi.letsmd.com*/
-                                /* api.letsmd.com*/
+                                return hv.verify("roadstartrips.com", session);
 
                             }
                         }).build();
@@ -78,7 +73,7 @@ public class ApiClient {
             }
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(BuildConfig.apiUrl)
                     .client(client)
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create(gson))

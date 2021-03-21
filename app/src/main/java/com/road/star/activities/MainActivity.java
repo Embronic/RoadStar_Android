@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.road.star.R;
@@ -21,6 +22,7 @@ import com.road.star.fragments.DashboardFragment;
 import com.road.star.fragments.SupportFragment;
 import com.road.star.fragments.YourPackageFrag;
 import com.road.star.utils.DialogUtil;
+import com.road.star.utils.SessionManager;
 
 import butterknife.ButterKnife;
 
@@ -71,6 +73,10 @@ public class MainActivity extends BaseActivity implements DialogCallback {
         mBinding.appBarMain.layoutAppBar.toolbarTitleTv.setText(getString(R.string.app_name));
         mBinding.appBarMain.layoutAppBar.ivMenu.setVisibility(View.VISIBLE);
         mBinding.appBarMain.layoutAppBar.ivMenu.setOnClickListener(this);
+        TextView tvName= mBinding.navigationView.getHeaderView(0).findViewById(R.id.tvName);
+        TextView tvEmail=mBinding.navigationView.getHeaderView(0).findViewById(R.id.tvEmail);
+        tvName.setText(SessionManager.get().getFirstName()+" "+ SessionManager.get().getLastName());
+        tvEmail.setText(SessionManager.get().getEmail());
         setUpNavigationView();
     }
 
@@ -178,6 +184,8 @@ public class MainActivity extends BaseActivity implements DialogCallback {
 
     @Override
     public void okPressed() {
+        WelcomeActivity.startActivity(this);
+        finish();
         closeDrawer();
     }
 

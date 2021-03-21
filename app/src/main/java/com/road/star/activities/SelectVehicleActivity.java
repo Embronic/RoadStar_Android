@@ -11,11 +11,9 @@ import com.road.star.R;
 import com.road.star.base.BaseActivity;
 import com.road.star.databinding.ActivitySelectVehicleBinding;
 
-import static com.road.star.utils.Constants.VEHICLE_TYPE_AIR;
 import static com.road.star.utils.Constants.VEHICLE_TYPE_CAR;
 import static com.road.star.utils.Constants.VEHICLE_TYPE_HAUL_TRUCK;
 import static com.road.star.utils.Constants.VEHICLE_TYPE_PICKUP_TRUCK;
-import static com.road.star.utils.Constants.VEHICLE_TYPE_SHIP;
 import static com.road.star.utils.Constants.VEHICLE_TYPE_TRICYCLE;
 
 public class SelectVehicleActivity extends BaseActivity {
@@ -62,13 +60,6 @@ public class SelectVehicleActivity extends BaseActivity {
         }else if (mVehicleType.equalsIgnoreCase(VEHICLE_TYPE_HAUL_TRUCK)) {
             mBinding.vehicleToolbarCardView.setImageDrawable(getResources().getDrawable(R.drawable.ic_long_haul_truck));
             mBinding.vehicleTypeTv.setText(getString(R.string.bulk_long_header));
-        }else if(mVehicleType.equalsIgnoreCase(VEHICLE_TYPE_AIR)){
-            mBinding.vehicleToolbarCardView.setImageDrawable(getResources().getDrawable(R.mipmap.ic_launcher));
-            mBinding.vehicleTypeTv.setText("Air");
-        }
-        else if(mVehicleType.equalsIgnoreCase(VEHICLE_TYPE_SHIP)){
-            mBinding.vehicleToolbarCardView.setImageDrawable(getResources().getDrawable(R.mipmap.ic_launcher));
-            mBinding.vehicleTypeTv.setText("Ship");
         }
     }
 

@@ -57,14 +57,12 @@
                 android:weightSum="4">
 
                 <LinearLayout
-                    android:id="@+id/tricycle_lin"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <com.road.star.utils.Road_Lable
-                        android:id="@+id/air_lbl"
                         style="@style/regular_black_14_text"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
@@ -84,7 +82,7 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
                             android:scaleType="fitXY"
-                             />
+                            android:src="@drawable/ic_tricycle" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -93,7 +91,6 @@
 
 
                 <LinearLayout
-                    android:id="@+id/car_lin"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5sdp"
@@ -102,7 +99,6 @@
                     android:orientation="vertical">
 
                     <com.road.star.utils.Road_Lable
-                        android:id="@+id/ship_lbl"
                         style="@style/regular_black_14_text"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
@@ -122,7 +118,7 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
                             android:scaleType="fitXY"
-                           />
+                            android:src="@drawable/ic_4_dor_car" />
                     </androidx.cardview.widget.CardView>
 
                     <!-- <include
@@ -134,7 +130,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/pickup_truck_lin"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_5sdp"
@@ -168,7 +163,7 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
                             android:scaleType="fitXY"
-                             />
+                            android:src="@drawable/ic_pick_up_truck" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -176,7 +171,6 @@
 
 
                 <LinearLayout
-                    android:id="@+id/haul_truck_lin"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -203,7 +197,7 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
                             android:scaleType="fitXY"
-                             />
+                            android:src="@drawable/ic_long_haul_truck" />
 
                     </androidx.cardview.widget.CardView>
 

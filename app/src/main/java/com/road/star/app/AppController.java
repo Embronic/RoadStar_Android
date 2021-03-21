@@ -7,7 +7,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 
+import com.facebook.stetho.Stetho;
 import com.road.star.base.BaseActivity;
+import com.road.star.utils.AppUtils;
+import com.road.star.utils.NetworkHandler;
 
 import java.lang.reflect.Method;
 
@@ -31,6 +34,7 @@ public class AppController extends Application implements Application.ActivityLi
     public void onCreate() {
         super.onCreate();
         instance = this;
+        NetworkHandler.isConnected = AppUtils.getNetworkState(this);
 
         registerActivityLifecycleCallbacks(this);
         appContext = this;
@@ -42,7 +46,8 @@ public class AppController extends Application implements Application.ActivityLi
                 e.printStackTrace();
             }
         }
-        //RetrofitClient.instance(BuildConfig.BASE_URL);
+
+        Stetho.initializeWithDefaults(this);
     }
 
     public static Context getContext() {

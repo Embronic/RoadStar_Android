@@ -52,6 +52,7 @@ import com.road.star.R;
 import com.road.star.app.AppController;
 import com.road.star.base.BaseActivity;
 
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -64,6 +65,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
 
@@ -110,7 +113,6 @@ public class AppUtils {
         toast.show();
         return toast;
     }
-
 
 
     /**
@@ -246,10 +248,54 @@ public class AppUtils {
         builder.show();
     }
 
+    public static AlertDialog showAlertDialog(Context mContext, String title, String message, String positiveBtnText,
+                                              String negativeBtnText, DialogInterface.OnClickListener clickListener,
+                                              boolean isCancelable) {
+        if (message == null)
+            message = "";
+
+        AlertDialog mAlertDialog = new AlertDialog.Builder(mContext)
+                .setMessage(message)
+                .setTitle(title)
+                .setCancelable(isCancelable)
+                .setNegativeButton(negativeBtnText, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setPositiveButton(positiveBtnText, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        if (clickListener != null)
+                            clickListener.onClick(dialog, which);
+                    }
+                }).create();
+
+        mAlertDialog.show();
+       /* Button buttonPositive = mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        buttonPositive.setTextColor(mContext.getResources().getColor(R.color.colorAccent));
+
+        Button buttonNegative = mAlertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        buttonNegative.setTextColor(mContext.getResources().getColor(R.color.colorAccent));*/
+        return mAlertDialog;
+    }
+
     public static String getDeviceId(Context context) {
         return UUID.randomUUID().toString();
     }
 
+
+    public static MultipartBody.Part prepareFilePart(String partName, String path) {
+        File file = new File(path);
+        RequestBody requestFile =
+                RequestBody.create(
+                        MediaType.parse("multipart/form-data"),
+                        file
+                );
+        return MultipartBody.Part.createFormData(partName, file.getName(), requestFile);
+    }
 
     public static String getCommonSeperatedString(List<String> actionObjects) {
         StringBuffer sb = new StringBuffer();
@@ -564,7 +610,7 @@ public class AppUtils {
     }
 
     public static String[] getCategorySpinnerData(Context mThis) {
-       return mThis.getResources().getStringArray(R.array.category_spinner_options);
+        return mThis.getResources().getStringArray(R.array.category_spinner_options);
     }
 
     public static String[] getProductTypeSpinnerData(Context mThis) {

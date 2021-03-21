@@ -10,14 +10,20 @@ import com.road.star.R;
 import com.road.star.base.BaseActivity;
 import com.road.star.databinding.ActivitySplashBinding;
 import com.road.star.utils.Constants;
+import com.road.star.utils.SessionManager;
 
 public class SplashActivity extends BaseActivity {
 
     private ActivitySplashBinding activitySplashBinding;
 
     private Runnable runnable = () -> {
-        WelcomeActivity.startActivity(this);
-        finish();
+        if(SessionManager.get().isLogin()) {
+            MainActivity.startActivity(mThis);
+            finish();
+        }else {
+            WelcomeActivity.startActivity(this);
+            finish();
+        }
     };
 
 

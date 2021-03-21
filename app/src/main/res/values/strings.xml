@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoadStar</string>
+    <string name="app_name">Road Star</string>
 
     <!--Dialog-->
     <string name="press_back_button_to_exit">Press back again to exit</string>
@@ -11,9 +11,12 @@
     <string name="no">No</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
+    <string name="update">Update</string>
     <string name="alphabets">aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUv VwWxXyYzZ</string>
     <string name="alphabets_withoutSpacing">aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ</string>
     <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="no_internet_error_msg">There might be a problem in the network connection</string>
+
 
     <!--default-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -33,13 +36,14 @@
     <string name="resend_code">Resend Code</string>
     <string name="next">Next</string>
     <string name="submit">Submit</string>
+    <string name="error_blank_OTP">Please enter 4 digit OTP</string>
 
 
     <!--Menu-->
     <string name="home">Home</string>
-    <string name="your_courier">Track your package</string>
+    <string name="your_courier">Your Package</string>
     <string name="booking_history">Booking History</string>
-    <string name="available_booking">Available Bookings</string>
+    <string name="available_booking">Available Booking</string>
     <string name="claim">Claim</string>
     <string name="payment_method">Payment Method</string>
     <string name="suppport">Support</string>
@@ -58,6 +62,8 @@
     <string name="address">Address</string>
     <string name="password">Password</string>
     <string name="already_have_account">Already have an account?</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
 
 
     <!--Sign In-->
@@ -71,8 +77,8 @@
 
 
     <!--DashBoard Fragment-->
-    <string name="local_delivery">Roadways Delivery</string>
-    <string name="air_and_sea_delivery">Air/Water Delivery</string>
+    <string name="local_delivery">Local Delivery</string>
+    <string name="air_and_sea_delivery">International Delivery</string>
 
     <!--Start Activity-->
     <string name="all_cycle">Tricycle\n</string>
@@ -153,7 +159,7 @@
 
 
     <!--Payment method-->
-    <string name="cash">Paypal wallet</string>
+    <string name="cash">Cash</string>
     <string name="card">Card</string>
     <string name="submit_your_card_details">Submit Your Card Details</string>
     <string name="done">Done</string>
@@ -213,6 +219,7 @@
     <!--Change Password Activity-->
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="save">Save</string>
 
     <!--Claim Fragment-->
@@ -223,16 +230,40 @@
 
     <!--Support Fragment-->
     <string name="support">Support</string>
+    
+    <!--Manager Vechile-->
+    <string name="existing_vehicle">Existing Vehicle</string>
+    <string name="add_new_vehicle">Add New Vehicle</string>
 
 
-    <!-- Alert-->
+    <!--Request Activity-->
+    <string name="view_full_details">View Full Details</string>
+
+
+    <!--Logout Alert-->
     <string name="logout_msg">Are you sure you want to\n Logout?</string>
 
 
     <!--Profile Activity-->
     <string name="my_profile">My Profile</string>
     <string name="edit_profile">Edit Profile</string>
-
     <string name="service_provider">Service Provider</string>
+
+
+    <!--Errors-->
+    <string name="error_blank_mobile">Please enter the mobile number</string>
+    <string name="server_error">There was a problem connecting to the server. Please try again later.</string>
+    <string name="error_blank_company_name">Please enter the company name</string>
+    <string name="error_blank_company_req_no">Please enter the company Registration number</string>
+    <string name="error_blank_email">Please enter the email address</string>
+    <string name="error_blank_address">Please enter the address</string>
+    <string name="error_blank_password">Please enter the password</string>
+    <string name="error_password_not_match">Password do not match</string>
+    <string name="error_document">Please select all the document</string>
+    <string name="error_first_name">Please enter the first name</string>
+    <string name="error_last_name">Please enter the last name</string>
+    <string name="error_city">Please select the city</string>
+    <string name="error_state">Please select the state</string>
+
 
 </resources>

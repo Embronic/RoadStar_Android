@@ -19,17 +19,19 @@
             android:src="@drawable/ic_launcher_background" />
 
         <com.road.star.utils.Road_Lable
+            android:id="@+id/tvName"
             style="@style/regular_black_14_text"
             android:layout_marginTop="@dimen/_5sdp"
-            android:text="Roma"
+            android:text=""
             android:textSize="@dimen/text_16"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorwhite" />
 
         <com.road.star.utils.Road_Lable
+            android:id="@+id/tvEmail"
             style="@style/regular_black_14_text"
             android:layout_marginTop="@dimen/_2sdp"
-            android:text="Roma1996@gmail.com"
+            android:text=""
             android:textSize="@dimen/text_16"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorwhite" />

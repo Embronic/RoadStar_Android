@@ -33,7 +33,7 @@
                 <com.road.star.utils.Road_Lable
                     style="@style/regular_black_16_text"
                     android:layout_centerVertical="true"
-                    android:text="notifications_lbl"
+                    android:text="Notifications"
                     android:textColor="@color/menu_text_color" />
 
                 <androidx.appcompat.widget.SwitchCompat

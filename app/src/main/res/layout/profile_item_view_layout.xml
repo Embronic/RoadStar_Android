@@ -49,8 +49,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_1sdp"
-            android:background="@color/color_seperator" />
+            android:layout_height="1dp"
+            android:background="@drawable/gray_gradient"/>
 
     </LinearLayout>
 

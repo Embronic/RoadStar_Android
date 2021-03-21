@@ -13,7 +13,7 @@
             </item>
 
             <item android:right="@dimen/dp_12">
-                <bitmap android:gravity="center_vertical|right" android:src="@drawable/ccp_ic_arrow_drop_down" />
+                <bitmap android:gravity="center_vertical|right" android:src="@drawable/ic_down_arrow" />
             </item>
         </layer-list>
 
